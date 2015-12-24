@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{6962F8DE-9B5E-44E1-842E-68514EE622D4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ProjectX</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>ProjectX</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin-Sidebar-Unified">
+      <HintPath>..\Components\SidebarNavigation-1.9\lib\ios-unified\Xamarin-Sidebar-Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="SDWebImage">
+      <HintPath>..\packages\Xamarin.SDWebImage.3.7.3.4\lib\Xamarin.iOS\SDWebImage.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Pop">
+      <HintPath>..\Components\Facebook.Pop-1.0.8\lib\ios-unified\Facebook.Pop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="UI\Color.cs" />
+    <Compile Include="UI\Font.cs" />
+    <Compile Include="Controllers\Equations.cs" />
+    <Compile Include="ViewControllers\MainViewController.cs" />
+    <Compile Include="ViewControllers\SideMenuController.cs" />
+    <Compile Include="ViewControllers\LoginViewController.cs" />
+    <Compile Include="ViewControllers\UIKeyboardNotifViewController.cs" />
+    <Compile Include="ViewControllers\SignupViewController.cs" />
+    <Compile Include="ViewControllers\ShopItemViewController.cs" />
+    <Compile Include="ViewControllers\ShopListViewController.cs" />
+    <Compile Include="UI\DesignElement.cs" />
+    <Compile Include="UI\ImageFilter.cs" />
+    <Compile Include="ViewControllers\FeedViewController.cs" />
+    <Compile Include="Models\NewsModel.cs" />
+    <Compile Include="Models\ShopModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="ViewControllers\MusicGridViewController.cs" />
+    <Compile Include="Controllers\Extensions.cs" />
+    <Compile Include="UI\Metrics.cs" />
+    <Compile Include="ViewControllers\SearchContactController.cs" />
+    <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\UserListViewModel.cs" />
+    <Compile Include="ViewModels\ShopItemViewModelStyle1.cs" />
+    <Compile Include="ViewModels\ShopItemViewModelStyle2.cs" />
+    <Compile Include="ViewModels\MenuTableSource.cs" />
+    <Compile Include="ViewModels\MusicPlayerViewModel.cs" />
+    <Compile Include="Templates\ViewCellTemplate.cs" />
+    <Compile Include="Views\UIImagedButton.cs" />
+    <Compile Include="ViewControllers\LyricsItemViewController.cs" />
+    <Compile Include="ViewModels\LyricsItemViewModel.cs" />
+    <Compile Include="ViewControllers\AnimatedMenuViewController.cs" />
+    <Compile Include="UI\Resource.cs" />
+    <Compile Include="ViewControllers\UserGridViewController.cs" />
+    <Compile Include="ViewControllers\SearchViewController.cs" />
+    <Compile Include="Views\JBKenBurnsView.cs" />
+    <Compile Include="Views\FihiranaNumberView.cs" />
+    <Compile Include="ViewControllers\SongViewController.cs" />
+    <Compile Include="ViewControllers\SongGridViewController.cs" />
+    <Compile Include="Views\TinderView.cs" />
+    <Compile Include="Views\SongNumberView.cs" />
+    <Compile Include="ViewControllers\SongVerticalViewController.cs" />
+    <Compile Include="Views\CustomBar.cs" />
+    <Compile Include="ViewControllers\SongListViewController.cs" />
+    <Compile Include="ViewModels\SongViewModel.cs" />
+    <Compile Include="Views\SongItemViewer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="SidebarNavigation">
+      <Version>1.9</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sdwebimage">
+      <Version>3.7.3.4</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="Facebook.Pop">
+      <Version>1.0.8</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectX.SlideoutNavigation\ProjectX.SlideoutNavigation.csproj">
+      <Project>{6D7B9B53-CFEF-46BE-A608-14A4A1381CF6}</Project>
+      <Name>ProjectX.SlideoutNavigation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="Resources\Icones\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Models\" />
+    <Folder Include="Resources\Files\" />
+    <Folder Include="Resources\Audios\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profil.jpeg" />
+    <BundleResource Include="Resources\Icones\icn_locked.png" />
+    <BundleResource Include="Resources\Images\login_back.png" />
+    <BundleResource Include="Resources\Icones\icn_mail.png" />
+    <BundleResource Include="Resources\Icones\icn_login.png" />
+    <BundleResource Include="Resources\Icones\icn_heart.png" />
+    <BundleResource Include="Resources\Icones\icn_star.png" />
+    <BundleResource Include="Resources\Icones\icn_camera.png" />
+    <BundleResource Include="Resources\Icones\icn_clock.png" />
+    <BundleResource Include="Resources\Icones\icn_logout.png" />
+    <BundleResource Include="Resources\Icones\icn_message.png" />
+    <BundleResource Include="Resources\Icones\icn_picture.png" />
+    <BundleResource Include="Resources\Icones\icn_arrow_left.png" />
+    <BundleResource Include="Resources\Icones\icn_user_light.png" />
+    <BundleResource Include="Resources\Icones\icn_user_dark.png" />
+    <BundleResource Include="Resources\Files\feed.json" />
+    <BundleResource Include="Resources\Images\HNCK7938.jpg" />
+    <BundleResource Include="Resources\Icones\icn_pause.png" />
+    <BundleResource Include="Resources\Icones\icn_play.png" />
+    <BundleResource Include="Resources\Audios\paradise.mp3" />
+    <BundleResource Include="Fonts\AvenirLTStd-Black.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-BlackOblique.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-Book.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-BookOblique.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-Heavy.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-HeavyOblique.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-Light.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-LightOblique.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-Medium.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-MediumOblique.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-Oblique.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Fonts\AvenirLTStd-Roman.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Icones\icn_cancel_filled.png" />
+    <BundleResource Include="Resources\Icones\icn_search_filled.png" />
+    <BundleResource Include="Resources\Icones\icn_search.png" />
+    <BundleResource Include="Resources\Images\Space_simple.png" />
+    <BundleResource Include="Resources\Images\Space-iPhone.jpg" />
+  </ItemGroup>
+</Project>
