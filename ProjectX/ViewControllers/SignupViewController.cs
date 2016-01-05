@@ -41,7 +41,7 @@ namespace ProjectX
 			AddElement(image, 32);
 
 			var photo = new UIButton(new CGRect(0, 0, 64, 64));
-			photo.SetImage(UIImage.FromFile(Resource.Icon("icn_camera.png")), UIControlState.Normal);
+			photo.SetImage(Resource.Icon("icn_camera.png"), UIControlState.Normal);
 			photo.BackgroundColor = UIColor.FromRGBA(255, 255, 255, 128);
 			photo.Center = image.Center;
 			photo.Layer.CornerRadius = 32;

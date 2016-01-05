@@ -29,7 +29,7 @@ namespace ProjectX
 			button = new UIButton(new CGRect(Metrics.Width - 84, Metrics.Height - 84, 64, 64));
 			button.BackgroundColor = Color.Primary;
 			button.Alpha = 0;
-			button.SetBackgroundImage(UIImage.FromFile(Resource.Icon("icn_arrow_up.png")), UIControlState.Normal);
+			button.SetBackgroundImage(Resource.Icon("icn_arrow_up.png"), UIControlState.Normal);
 			DesignElement.AddShadowAndRounded(button);
 			button.TouchDown += (sender, e) => TableView.SetContentOffset(CGPoint.Empty, true);
 		}

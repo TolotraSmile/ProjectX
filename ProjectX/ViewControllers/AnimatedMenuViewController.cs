@@ -174,7 +174,7 @@ namespace ProjectX
 				}
 			};
 			item.Alpha = 0.8f;
-			item.SetImage(UIImage.FromFile(buttonItem.Icon), UIControlState.Normal);
+			item.SetImage(buttonItem.Icon, UIControlState.Normal);
 			buttons.Add(item);
 		}
 
@@ -196,9 +196,9 @@ namespace ProjectX
 	{
 		public Action Action { get; set; }
 
-		public String Icon { get; set; }
+		public UIImage Icon { get; set; }
 
-		public CircularButtonItem(string icon, Action action)
+		public CircularButtonItem(UIImage icon, Action action)
 		{
 			Icon = icon;
 			Action = action;

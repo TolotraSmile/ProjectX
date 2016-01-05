@@ -16,11 +16,11 @@ namespace ProjectX
 	{
 		static int height = 40;
 
-		static public UITextField MakeTextField(nfloat x, nfloat y, nfloat width, string imageName)
+		static public UITextField MakeTextField(nfloat x, nfloat y, nfloat width, UIImage imageName)
 		{
 			var image = new UIImageView(new CGRect(0, 0, height, height));
 			image.Layer.CornerRadius = image.Frame.Height / 2;
-			image.Image = UIImage.FromFile(imageName);
+			image.Image = imageName;
 			image.Layer.MasksToBounds = true;
 
 			var left = new UIView(new CGRect(0, 0, height + height / 2, height));
@@ -44,6 +44,10 @@ namespace ProjectX
 				return true;
 			};
 			return text;
+		}
+
+		static public UITextField MakeTextField(nfloat x, nfloat y, nfloat width, string imageName){
+			return DesignElement.MakeTextField(x,y,width,UIImage.FromFile(imageName));
 		}
 
 		static public UIButton MakeTextButton(nfloat x, nfloat y, nfloat width)
@@ -88,6 +92,16 @@ namespace ProjectX
 		{
 			var button = new UIImagedButton(new CGRect(x, y, width, height), Font.Title(16), alignement);
 			button.Image = UIImage.FromFile(imagename);
+			//button.Font = Font.Normal(16);
+			//button.Layer.CornerRadius = height / 2;
+			//button.Layer.MasksToBounds = true;
+			return button;
+		}
+
+		static public UIImagedButton MakeImageButton(nfloat x, nfloat y, nfloat width, UIImage imagename, UITextAlignment alignement)
+		{
+			var button = new UIImagedButton(new CGRect(x, y, width, height), Font.Title(16), alignement);
+			button.Image = imagename;
 			//button.Font = Font.Normal(16);
 			//button.Layer.CornerRadius = height / 2;
 			//button.Layer.MasksToBounds = true;

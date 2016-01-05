@@ -47,11 +47,11 @@ namespace ProjectX
 
 
 			var favorite = new UIButton(new CGRect(0, image.Frame.Bottom - 48, 48, 48));
-			favorite.SetImage(UIImage.FromFile(Resource.Icon("icn_star.png")), UIControlState.Normal);
+			favorite.SetImage(Resource.Icon("icn_star.png"), UIControlState.Normal);
 			Add(favorite);
 
 			var like = new UIButton(new CGRect(48, image.Frame.Bottom - 48, 48, 48));
-			like.SetImage(UIImage.FromFile(Resource.Icon("icn_heart.png")), UIControlState.Normal);
+			like.SetImage(Resource.Icon("icn_heart.png"), UIControlState.Normal);
 			Add(like);
 
 			y += Metrics.Padding;

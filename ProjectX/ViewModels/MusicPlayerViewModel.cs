@@ -49,18 +49,18 @@ namespace ProjectX
 			var error = new NSError();
 			var player = new AVAudioPlayer(new NSUrl(Resource.Audio("paradise.mp3")), "mp3", out error);
 			var control = new UIButton(new CGRect(left.Frame.Width - 68, 0, 68, 68));
-			control.SetImage(UIImage.FromFile(Resource.Icon("icn_play.png")), UIControlState.Normal);
+			control.SetImage(Resource.Icon("icn_play.png"), UIControlState.Normal);
 			control.TouchDown += (sender, e) => {
 				if (player.Playing) {
 					UIView.Animate(0.7, () => {
-						control.SetImage(UIImage.FromFile(Resource.Icon("icn_play.png")), 
+						control.SetImage(Resource.Icon("icn_play.png"), 
 							UIControlState.Normal);
 						control.BackgroundColor = UIColor.White;
 					});
 					player.Pause();
 				} else {
 					UIView.Animate(0.7, () => {
-						control.SetImage(UIImage.FromFile(Resource.Icon("icn_pause.png")), 
+						control.SetImage(Resource.Icon("icn_pause.png"), 
 							UIControlState.Normal);
 						control.BackgroundColor = Color.Primary;
 					});

@@ -77,12 +77,12 @@ namespace ProjectX
 
 		internal class MenuItemViewModel : UIView
 		{
-			public MenuItemViewModel(string title, string imageName)
+			public MenuItemViewModel(string title, UIImage imageName)
 				: base(new CGRect(0, 0, Metrics.Width, 24 + Metrics.Padding * 2))
 			{
 				var image = new UIImageView(new CGRect(Metrics.Padding / 2, 0, 44, 44));
 				image.Center = new CGPoint(image.Center.X, Frame.Height / 2);
-				image.Image = UIImage.FromFile(imageName);
+				image.Image = imageName;
 				Add(image);
 
 				var x = Metrics.Padding + 44;
@@ -102,11 +102,11 @@ namespace ProjectX
 		{
 			public string Title { get; set; }
 
-			public string Image { get; set; }
+			public UIImage Image { get; set; }
 
 			public Action Action { get; set; }
 
-			public MenuItem(string title, string image, Action action)
+			public MenuItem(string title, UIImage image, Action action)
 			{
 				Title = title;
 				Image = image;

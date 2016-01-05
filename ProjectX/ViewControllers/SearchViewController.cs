@@ -38,7 +38,7 @@ namespace ProjectX
 			Add(seachView);
 
 			var image = new UIImageView(new CGRect(0, 0, 32, 32));
-			image.Image = UIImage.FromFile(Resource.Icon("icn_search.png"));
+			image.Image = Resource.Icon("icn_search.png");
 			image.BackgroundColor = UIColor.Clear;
 			image.Layer.MasksToBounds = true;
 
@@ -61,7 +61,7 @@ namespace ProjectX
 			var button = new UIButton(new CGRect(0, 0, 24, 24));
 			button.Center = new Point(16, 16);
 			button.Layer.CornerRadius = button.Frame.Height / 2;
-			button.SetImage(UIImage.FromFile(Resource.Icon("icn_cancel_filled.png")), UIControlState.Normal);
+			button.SetImage(Resource.Icon("icn_cancel_filled.png"), UIControlState.Normal);
 
 			right.Add(button);
 			button.TouchDown += (sender, e) => {

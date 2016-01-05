@@ -6,19 +6,20 @@
 //
 // Copyright (c) 2015 TMS Consulting
 using System;
+using UIKit;
 
 namespace ProjectX
 {
-	public class Resource
+	public static class Resource
 	{
-		static public string  Icon(string filename)
+		static public UIImage  Icon(string filename)
 		{
-			return "Icones/" + filename;
+			return UIImage.FromFile( "Icones/" + filename);
 		}
 
-		static public string  Image(string filename)
+		static public UIImage  Image(string filename)
 		{
-			return "Images/" + filename;
+			return UIImage.FromFile("Images/" + filename);
 		}
 
 		static public string  File(string filename)

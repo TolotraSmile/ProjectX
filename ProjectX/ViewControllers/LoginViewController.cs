@@ -136,7 +136,7 @@ namespace ProjectX
 
 			var button = new UIButton(new CGRect(0, 0, 64, 64));
 			button.BackgroundColor = Color.Primary;
-			button.SetBackgroundImage(UIImage.FromFile(Resource.Icon("icn_arrow_up.png")), UIControlState.Normal);
+			button.SetBackgroundImage(Resource.Icon("icn_arrow_up.png"), UIControlState.Normal);
 			button.Layer.CornerRadius = button.Frame.Height / 2;
 			View.Add(button);
 
@@ -167,4 +167,3 @@ namespace ProjectX
 		}
 	}
 }
-
