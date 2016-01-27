@@ -117,33 +117,22 @@ namespace ProjectX
 			return avatar;
 		}
 
-		static public void NormalizeNavigation(UINavigationController navigation)
+		static public void SetNavigationColor(UINavigationController navigation)
 		{
 			if (navigation != null) {
-				navigation.NavigationBar.BarTintColor = UIColor.Clear;
+				navigation.NavigationBar.BarTintColor = UIColor.FromRGB(15,22,33);
 				navigation.NavigationBar.TintColor = UIColor.White;
 				navigation.NavigationBar.BackgroundColor = UIColor.White;
 				navigation.NavigationBar.Translucent = false;
 				navigation.NavigationBar.BarStyle = UIBarStyle.Black;
 			}
 		}
-		static public void NormalizeNavigation(UINavigationController navigation, UIColor barColor)
+		static public void SetNavigationColor(UINavigationController navigation, UIColor barColor)
 		{
 			if (navigation != null) {
 				navigation.NavigationBar.BarTintColor = barColor;
 				navigation.NavigationBar.TintColor = UIColor.White;
 				navigation.NavigationBar.BackgroundColor = UIColor.White;
-				navigation.NavigationBar.Translucent = false;
-				navigation.NavigationBar.BarStyle = UIBarStyle.Black;
-			}
-		}
-
-		static public void ClearNavigation(UINavigationController navigation)
-		{
-			if (navigation != null) {
-				navigation.NavigationBar.BarTintColor = UIColor.Clear;
-				navigation.NavigationBar.TintColor = UIColor.White;
-				navigation.NavigationBar.BackgroundColor = UIColor.Clear;
 				navigation.NavigationBar.Translucent = false;
 				navigation.NavigationBar.BarStyle = UIBarStyle.Black;
 			}

@@ -20,7 +20,7 @@ namespace ProjectX
 		{
 			base.ViewDidLoad();
 
-			DesignElement.NormalizeNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 			View.BackgroundColor = UIColor.White;
 			var searhBar = new UISearchView(20);
 			NavigationItem.TitleView = searhBar;

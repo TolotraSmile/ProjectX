@@ -30,7 +30,7 @@ namespace ProjectX
 
 			// new UIAlertView("Message", e.Message, null, "OK", null).Show();
 			//Window.RootViewController = new UINavigationController(new AnimatedMenu());
-			Window.RootViewController = new UINavigationController(new SongListViewController());
+			Window.RootViewController = new UINavigationController(new LoginViewController());
 
 			// make the window visible
 			Window.MakeKeyAndVisible();

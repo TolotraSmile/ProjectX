@@ -24,9 +24,9 @@ namespace ProjectX
 				new CircularButtonItem(Resource.Icon("icn_star.png"), () => NavigationController.PushViewController(new MusicGridViewController(), true)),
 				new CircularButtonItem(Resource.Icon("icn_mail.png"), () => NavigationController.PushViewController(new FeedViewController(), true)),
 				new CircularButtonItem(Resource.Icon("icn_mail.png"), () => NavigationController.PushViewController(new MainViewController(), true)),
-				//new CircularButtonItem(Resource.Icon("icn_star.png"), () => NavigationController.PushViewController(new MusicGridViewController(), true)),
+				new CircularButtonItem(Resource.Icon("icn_star.png"), () => NavigationController.PushViewController(new LyricsItemViewController(new List<int>{1,2,3}), true)),
 			};
-			View.BackgroundColor = UIColor.Black;
+			View.BackgroundColor = UIColor.FromRGB(15,22,33);
 			var view = new CircularMenu(buttons);
 			view.Center = new CGPoint(Metrics.Width / 2, (Metrics.Height - 64) / 2);
 			Add(view);
@@ -35,7 +35,7 @@ namespace ProjectX
 		public override void ViewWillAppear(bool animated)
 		{
 			base.ViewWillAppear(animated);
-			DesignElement.ClearNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 		}
 	}
 

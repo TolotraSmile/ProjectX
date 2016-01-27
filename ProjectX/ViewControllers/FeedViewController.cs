@@ -21,7 +21,7 @@ namespace ProjectX
 		{
 			base.ViewDidLoad();
 
-			DesignElement.NormalizeNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 
 			var list = new List<Object>();
 			list.AddRange(NewsModel.Samples());

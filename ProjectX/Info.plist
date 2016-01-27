@@ -43,10 +43,5 @@
 		<string>Fonts/AvenirLTStd-Black.otf</string>
 		<string>Fonts/AvenirLTStd-Light.otf</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 </dict>
 </plist>

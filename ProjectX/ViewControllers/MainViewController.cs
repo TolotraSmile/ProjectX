@@ -18,7 +18,7 @@ namespace ProjectX
 		{
 			base.ViewDidLoad();
 			View.BackgroundColor = UIColor.White;
-			DesignElement.NormalizeNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 			//NavigationController.SetNavigationBarHidden(false, false);
 			var item = ShopModel.Samples().First();
 			var news = new ShopItemViewModelStyle1(item.Title, item.SubTitle);

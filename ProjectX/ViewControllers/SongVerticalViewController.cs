@@ -64,11 +64,11 @@ namespace ProjectX
 			const int size = 40;
 			for (int i = 0; i < max; i++) {
 
-				const string text = "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n" 
-					+ "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n" 
-					+ "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n" 
-					+ "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n" 
-					+ "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n";
+				const string text = "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n"
+				                    + "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n"
+				                    + "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n"
+				                    + "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n"
+				                    + "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay\n\n";
 
 				var view = new SongItemViewer(i, text);
 				views.Add(view);
@@ -127,7 +127,7 @@ namespace ProjectX
 		}
 
 		public int Index {
-			get { return index; }
+			get { return index; }	
 			set {
 				UIView.Animate(0.5, () => {
 					if (value >= 0 && value < max) {
@@ -135,8 +135,8 @@ namespace ProjectX
 							var x = (i - value);
 							System.Diagnostics.Debug.WriteLine("target = " + value);
 							System.Diagnostics.Debug.WriteLine("x = " + x);
-							views[i].Frame = new CGRect((x * Metrics.Width) + Metrics.Padding, 
-								64 + Metrics.Padding * 2, Metrics.Width - 2 * Metrics.Padding, Metrics.Height);
+							views[i].Frame = new CGRect((x * Metrics.Width) + Metrics.Padding2, 
+								64 + Metrics.Padding * 3, Metrics.Width - 2 * Metrics.Padding2, Metrics.Height - Metrics.Padding2);
 							views[i].Alpha = x == 0 ? 1 : 0;
 							//views[i].Alpha = (nfloat)Math.Abs(x/(max-target));
 						}

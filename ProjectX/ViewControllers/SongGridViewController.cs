@@ -32,7 +32,7 @@ namespace ProjectX
 			base.ViewDidLoad();
 			View.BackgroundColor = UIColor.White;
 
-			DesignElement.NormalizeNavigation(NavigationController, Color.Primary);
+			DesignElement.SetNavigationColor(NavigationController, Color.Primary);
 			Title = "417";
 
 			var scroll = new UIScrollView(new CGRect(0, 0, Metrics.Width, Metrics.Height));

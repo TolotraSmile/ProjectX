@@ -24,7 +24,7 @@ namespace ProjectX
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			DesignElement.NormalizeNavigation(NavigationController, Color.Primary);
+			DesignElement.SetNavigationColor(NavigationController, Color.Primary);
 			View.BackgroundColor = UIColor.White;
 			const string text = "Ilay ISPM tena maminay\nTsy mba foinay tokoa rahatrizay\nToerana nanabeazana ny tenanay\nMba ho tena olom-banona mahay";
 			nfloat y = Metrics.Padding2;

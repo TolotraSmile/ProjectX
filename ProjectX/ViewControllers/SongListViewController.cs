@@ -17,10 +17,6 @@ namespace ProjectX
 {
 	public class SongListViewController : UIViewController
 	{
-		public SongListViewController()
-		{
-		}
-
 
 		public class SongItem
 		{
@@ -39,7 +35,7 @@ namespace ProjectX
 			list.AddRange(NewsModel.Samples());
 			list.AddRange(NewsModel.Samples());
 
-			var items = list.Select(x => new SongItem() { Data = x, Action = () => NavigationController.PushViewController(new SongVerticalViewController(), true)
+			var items = list.Select(x => new SongItem { Data = x, Action = () => NavigationController.PushViewController(new SongVerticalViewController(), true)
 			});
 
 			var table = new UITableView(View.Frame);
@@ -89,7 +85,7 @@ namespace ProjectX
 
 			public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 			{
-				var current = Models[indexPath.Row];
+				//var current = Models[indexPath.Row];
 				var cell = tableView.DequeueReusableCell(ViewCellTemplate.Key);
 				ViewCellTemplate cellController;
 				if (cell == null) { 

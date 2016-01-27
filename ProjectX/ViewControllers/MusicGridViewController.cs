@@ -33,7 +33,7 @@ namespace ProjectX
 				ItemSize = new CGSize(size, size)
 			};
 
-			DesignElement.NormalizeNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 
 			var collectionFrame = new CGRect(0, 0, Metrics.Width, Metrics.Height - 64);
 			var collection = new UICollectionView(collectionFrame, flowLayout) {

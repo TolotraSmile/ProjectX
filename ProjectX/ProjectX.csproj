@@ -230,5 +230,6 @@
     <BundleResource Include="Resources\Icones\icn_search.png" />
     <BundleResource Include="Resources\Images\Space_simple.png" />
     <BundleResource Include="Resources\Images\Space-iPhone.jpg" />
+    <BundleResource Include="Resources\Files\fihiranafanampiny.json" />
   </ItemGroup>
 </Project>

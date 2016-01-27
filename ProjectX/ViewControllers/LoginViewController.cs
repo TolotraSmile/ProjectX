@@ -15,6 +15,7 @@ namespace ProjectX
 	public class LoginViewController : UIKeyboardNotifViewController
 	{
 		JBKenBurnsView imageView;
+
 		public override void ViewDidLoad()
 		{
 			NavigationController.SetNavigationBarHidden(true, false);
@@ -27,7 +28,7 @@ namespace ProjectX
 			//Add(background);
 
 
-			 imageView = new JBKenBurnsView {
+			imageView = new JBKenBurnsView {
 				Frame = UIScreen.MainScreen.Bounds,
 				Images = new System.Collections.Generic.List<UIImage> { UIImage.FromFile("Images/login_back.png") },
 				UserInteractionEnabled = false,
@@ -53,7 +54,7 @@ namespace ProjectX
 			signup.SetTitle("Signup", UIControlState.Normal);
 			AddElement(signup, 15);
 			TranslateFrom(signup, Metrics.Height);
-			signup.TouchDown += (sender, e) => NavigationController.PushViewController(new SongVerticalViewController(), true);
+			signup.TouchDown += (sender, e) => NavigationController.PushViewController(new SongListViewController(), true);
 
 			var signin = DesignElement.MakeImageButton(20, y, Metrics.Width - 40, Resource.Icon("icn_login.png"), UITextAlignment.Right);
 			signin.BackgroundColor = Color.Primary;
@@ -98,7 +99,7 @@ namespace ProjectX
 			view.Alpha = 0;
 			view.Frame = new CGRect(view.Frame.X, y, view.Frame.Width, view.Frame.Height);
 			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseIn);
-			UIView.Animate(0.5, () => {
+			UIView.Animate(0.7, () => {
 				view.Frame = rect;
 				view.Alpha = 1;
 			});

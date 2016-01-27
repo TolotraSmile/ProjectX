@@ -22,7 +22,7 @@ namespace ProjectX
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			DesignElement.NormalizeNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 			TableView.Source = new ShopTableSource(ShopModel.Samples(), this);
 			TableView.IndicatorStyle = UIScrollViewIndicatorStyle.White;
 

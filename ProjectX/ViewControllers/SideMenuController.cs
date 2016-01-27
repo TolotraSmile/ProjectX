@@ -27,7 +27,7 @@ namespace ProjectX
 		{
 			base.ViewDidLoad();
 
-			DesignElement.NormalizeNavigation(NavigationController);
+			DesignElement.SetNavigationColor(NavigationController);
 
 			TableView.TableHeaderView = HeaderView();
 			TableView.Source = new MenuTableSource(MenuTableSource.Items(NavigationController, parent), this);
